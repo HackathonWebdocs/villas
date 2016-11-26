@@ -1,0 +1,35 @@
+.reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 5rem;
+
+    .wrapper {
+        width: 100vw;
+
+        &.demo {
+            font-size: 20vh;
+            color: white;
+        }
+
+        video {
+            object-fit: cover;
+            min-height: 100vh;
+            width: 100vw;
+        }
+    }
+
+    &.top {
+        background: black;
+        z-index: 2;
+        width: 95vw;
+        overflow: hidden;
+
+    }
+
+    &.bottom {
+        z-index: 1;
+    }
+}
