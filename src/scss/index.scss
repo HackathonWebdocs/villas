@@ -30,11 +30,24 @@
 .skip {
     background: white;
     padding: 1rem 3rem;
-    font-size: 2rem;
+    font-size: 1rem;
     position: absolute;
     right: 3rem;
     bottom: 3rem;
     text-decoration: none;
     color: black;
     z-index: 100;
+	border-radius:10px;
+}
+.about {
+    background: white;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    text-decoration: none;
+    color: black;
+    z-index: auto;
+	border-radius:10px;
 }
