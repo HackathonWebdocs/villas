@@ -41,15 +41,17 @@
 }
 .arrow {
     background-color: #00a790;
-    padding: 0 1rem;
+    padding: 0 10px;
     font-size: 0.8rem;
     position: absolute;
-    top: 20rem;
-    right: 83rem;
+    top: 45%;
+    left: 1%;
     text-decoration: none;
     color: white;
     z-index: 10;
-	border-radius:10px;
+	border-radius:25px;
 }
 .about a {color:#FFF; text-decoration:none;}
 .about:hover {background-color: #7bdcd5;}
+.arrow a {color:#FFF; text-decoration:none;}
+.arrow:hover {background-color: #7bdcd5;}
