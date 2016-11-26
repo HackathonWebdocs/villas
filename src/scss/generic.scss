@@ -1,1 +1,14 @@
 @import "~normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@mixin fullScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
