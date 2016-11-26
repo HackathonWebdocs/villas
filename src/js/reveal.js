@@ -1,4 +1,3 @@
-import '../scss/generic.scss';
 import '../scss/reveal.scss';
 
 import $ from 'jquery';
@@ -9,8 +8,9 @@ let TIME = 20 * 1000;
 const $slide = $('.slide');
 const $top = $slide.find('.top');
 
-const backMedia = $slide.find('.bottom video').get(0);
-const frontAudio = $top.find('audio').get(0);
+const $backMedia = $slide.find('.bottom video');
+const $frontAudio = $top.find('audio,video');
+let lock = true;
 
 const next = $slide.data('next');
 
@@ -22,8 +22,9 @@ const auto = () => {
 
 const adjustVolumes = () => {
     const frontVol = $top.width() / WIDTH;
-    frontAudio.volume = frontVol;
-    backMedia.volume = 1 - frontVol;
+
+    if ($frontAudio.length) $frontAudio.get(0).volume = frontVol;
+    if ($backMedia.length) $backMedia.get(0).volume = 1 - frontVol;
 };
 
 $slide.on('mouseover', (e) => {
@@ -32,7 +33,7 @@ $slide.on('mouseover', (e) => {
     $slide.on('mousemove', (e) => {
         const position = e.clientX;
 
-        if (position < 20) location = next;
+        if (position < 20 && !lock) location = next;
 
         $top.css({
             width: `${Math.floor(position / WIDTH * 100)}vw`
@@ -47,4 +48,5 @@ $slide.on('mouseout', () => {
 });
 
 auto();
-setInterval(adjustVolumes, 100);
+setInterval(adjustVolumes, 500);
+setTimeout(() => lock = false, 3000);

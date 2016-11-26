@@ -1,3 +1,5 @@
+@import 'generic.scss';
+
 .reveal {
     @include fullScreen;
     font-size: 5rem;
@@ -5,9 +7,7 @@
     .wrapper {
         width: 100vw;
         video {
-            object-fit: cover;
-            min-height: 100vh;
-            width: 100vw;
+            @include fitVideo;
         }
 		&.video1 {color: #EFE7E7;}
     }
