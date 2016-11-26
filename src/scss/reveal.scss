@@ -8,12 +8,6 @@
 
     .wrapper {
         width: 100vw;
-
-        &.demo {
-            font-size: 20vh;
-            color: white;
-        }
-
         video {
             object-fit: cover;
             min-height: 100vh;
@@ -33,3 +27,4 @@
         z-index: 1;
     }
 }
+.slide {margin: 50px;}
