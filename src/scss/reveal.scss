@@ -14,6 +14,7 @@ body {
     font-size: 5rem;
 
     .wrapper {
+        position: relative;
         width: 100vw;
         video {
             @include fitVideo;
@@ -79,7 +80,7 @@ body {
     text-decoration: none;
     color: #00a790;
     z-index: 10;
-	
+
 }
 .about a {color:#FFF; text-decoration:none;}
 .about:hover {background-color: #7bdcd5;}

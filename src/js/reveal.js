@@ -37,11 +37,11 @@ $handler.on('mousedown', () => mousedown = true);
 $(document).on('mouseup', () => mousedown = false);
 
 $slide.on('mouseover', (e) => {
-    $top.stop();
 
     $slide.on('mousemove', (e) => {
         const position = e.clientX;
         if (mousedown) {
+            $top.stop();
             $top.css({
                 width: `${Math.floor(position / WIDTH * 100)}vw`
             });
