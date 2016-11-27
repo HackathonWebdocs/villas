@@ -13,6 +13,7 @@ const $frontAudio = $top.find('audio,video');
 let lock = true;
 
 const next = $slide.data('next');
+const delay = $slide.data('delay') * 1000 | 0;
 
 const auto = () => {
     $top.animate({
@@ -47,7 +48,7 @@ $slide.on('mouseout', () => {
     auto();
 });
 
-auto();
+setTimeout(() => auto(), delay);
 setInterval(adjustVolumes, 500);
 setTimeout(() => lock = false, 3000);
 setTimeout(() => $('body').addClass('active'), 500);
