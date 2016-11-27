@@ -8,13 +8,18 @@ body {
 	background-color: #000000;
 }
 .solucion {border:1px #514E4E solid;border-radius: 25px;padding: 5% 7% 10% 7%;background-color: #FFF;float: none; margin: 5% 15%;min-width: 325px;}
-.boton1 {background-color: #00a790; border-radius: 10px;padding:15px 25px 15px 25px;}
+.boton1 {background-color: #00a790; border-radius: 10px;padding:15px 25px 15px 25px; border-style:none; color:#FFF;font-family: 'Montserrat', sans-serif;}
 .boton1 a {color:#FFF; text-decoration:none;}
 .boton1:hover {background-color: #7bdcd5;}
 .boton2 {background-color: #CB0F12; border-radius: 10px;padding:15px 20px 15px 20px;margin-left:15px;}
 .boton2 a {color:#FFF;  text-decoration:none;}
 .boton2:hover {background-color: #eea796;}
 </style>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 </head>
 <body>
     <div align="center" class="solucion">
@@ -33,7 +38,7 @@ body {
     <br>
     <br>
       
-     <span class="boton1"><a href="javascript:history.go(-1);" target="_blank">Volver</a></span> 
+     <button class="boton1" onclick="goBack()">Volver</button>
     
 </div>
 <script src="dist/assets/commons.js" type="text/javascript"></script>
