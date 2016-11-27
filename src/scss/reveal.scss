@@ -2,7 +2,7 @@
 
 body {
     opacity:0;
-    transition: opacity 1s linear;
+    transition: opacity 0s linear;
 
     &.active {
         opacity: 1;
@@ -24,16 +24,16 @@ body {
     &.top {
         background: black;
         z-index: 2;
-        width: 95vw;
+        width: 99vw;
         overflow: hidden;
 
         .handler {
             position: absolute;
             width: 20px;
-            height: 200px;
+            height: 100px;
             background: #00a790;
             right: 0;
-            top: 50%;
+            top: 56.2%;
             margin-top: -100px;
         }
     }
@@ -75,3 +75,27 @@ body {
 .about:hover {background-color: #7bdcd5;}
 .arrow a {color:#FFF; text-decoration:none;}
 .arrow:hover {background-color: #7bdcd5;}
+.creacion {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 87%;
+    right: 5%;
+    color: white;
+    z-index: 10;
+}
+.desintegracion {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 87%;
+    left: 5%;
+    color: black;
+    z-index: 2;
+}
+.bajada1 {
+    font-size: 1rem;
+    top: 92%;
+}
+.bajada2 {
+    font-size: 1rem;
+    top: 92%;
+}

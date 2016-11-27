@@ -19,4 +19,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
     background: black;
+	user-select: none;
+	-ms-user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
 }
