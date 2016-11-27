@@ -3,7 +3,7 @@ import '../scss/reveal.scss';
 import $ from 'jquery';
 
 const WIDTH = $(window).width();
-let TIME = 20 * 1000;
+let TIME = 25 * 1000;
 
 const $slide = $('.slide');
 const $top = $slide.find('.top');
