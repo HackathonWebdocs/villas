@@ -50,3 +50,4 @@ $slide.on('mouseout', () => {
 auto();
 setInterval(adjustVolumes, 500);
 setTimeout(() => lock = false, 3000);
+setTimeout(() => $('body').addClass('active'), 500);

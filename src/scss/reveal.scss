@@ -1,5 +1,14 @@
 @import 'generic.scss';
 
+body {
+    opacity:0;
+    transition: opacity 1s linear;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
 .reveal {
     @include fullScreen;
     font-size: 5rem;
