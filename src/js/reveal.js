@@ -11,9 +11,14 @@ const $top = $slide.find('.top');
 const $backMedia = $slide.find('.bottom video');
 const $frontAudio = $top.find('audio,video');
 let lock = true;
+let mousedown = false;
 
 const next = $slide.data('next');
 const delay = $slide.data('delay') * 1000 | 0;
+
+const $handler = $('<div class="handler"></div>');
+
+$top.append($handler);
 
 const auto = () => {
     $top.animate({
@@ -28,24 +33,25 @@ const adjustVolumes = () => {
     if ($backMedia.length) $backMedia.get(0).volume = 1 - frontVol;
 };
 
+$handler.on('mousedown', () => mousedown = true);
+$(document).on('mouseup', () => mousedown = false);
+
 $slide.on('mouseover', (e) => {
     $top.stop();
 
     $slide.on('mousemove', (e) => {
         const position = e.clientX;
-
-        if (position < 20 && !lock) location = next;
-
-        $top.css({
-            width: `${Math.floor(position / WIDTH * 100)}vw`
-        });
+        if (mousedown) {
+            $top.css({
+                width: `${Math.floor(position / WIDTH * 100)}vw`
+            });
+        }
 
     });
 });
 
 $slide.on('mouseout', () => {
     $slide.off('mousemove');
-    auto();
 });
 
 setTimeout(() => auto(), delay);
